@@ -27,6 +27,7 @@
 		DDB1D22327C2A6C100DD7D9B /* EmphasizedBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22227C2A6C100DD7D9B /* EmphasizedBookCard.swift */; };
 		DDB1D22527C2AA7100DD7D9B /* DefaultBookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22427C2AA7100DD7D9B /* DefaultBookCard.swift */; };
 		DDB1D22727C2B05D00DD7D9B /* NewBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22627C2B05D00DD7D9B /* NewBook.swift */; };
+		DDB1D22927C2B18500DD7D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB1D22827C2B18300DD7D9B /* LaunchScreen.storyboard */; };
 		DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547327C282740090E36D /* Better_BooksApp.swift */; };
 		DDCC547627C282740090E36D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547527C282740090E36D /* ContentView.swift */; };
 		DDCC547827C282760090E36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547727C282760090E36D /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		DDB1D22227C2A6C100DD7D9B /* EmphasizedBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasizedBookCard.swift; sourceTree = "<group>"; };
 		DDB1D22427C2AA7100DD7D9B /* DefaultBookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBookCard.swift; sourceTree = "<group>"; };
 		DDB1D22627C2B05D00DD7D9B /* NewBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBook.swift; sourceTree = "<group>"; };
+		DDB1D22827C2B18300DD7D9B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDCC547027C282740090E36D /* Better Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCC547327C282740090E36D /* Better_BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksApp.swift; sourceTree = "<group>"; };
 		DDCC547527C282740090E36D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				DDB1D1F727C2851100DD7D9B /* Logic */,
 				DDB1D1FF27C28B8300DD7D9B /* Caching */,
 				DDCC547727C282760090E36D /* Assets.xcassets */,
+				DDB1D22827C2B18300DD7D9B /* LaunchScreen.storyboard */,
 				DDB1D21027C29B0400DD7D9B /* GoogleService-Info.plist */,
 				DDCC547927C282760090E36D /* Preview Content */,
 			);
@@ -341,6 +344,7 @@
 				DDB1D1F527C2838100DD7D9B /* README.md in Resources */,
 				DDB1D21127C29B0400DD7D9B /* GoogleService-Info.plist in Resources */,
 				DDCC547B27C282760090E36D /* Preview Assets.xcassets in Resources */,
+				DDB1D22927C2B18500DD7D9B /* LaunchScreen.storyboard in Resources */,
 				DDCC547827C282760090E36D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +552,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -578,6 +583,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

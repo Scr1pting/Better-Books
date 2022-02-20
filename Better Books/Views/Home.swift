@@ -39,7 +39,7 @@ struct Home: View {
                                     Image(systemName: "plus.circle")
                                         .imageScale(.large)
                                 }
-                                .padding(.bottom, 3)
+                                .padding(.bottom, 5)
                                 .sheet(isPresented: $showNewBookSheet) {
                                     NewBook()
                                 }
@@ -60,11 +60,6 @@ struct Home: View {
                     }
                 }
                 .navigationTitle("Better Books")
-                .toolbar {
-                    ToolbarItem {
-                        Button("Test", action: {})
-                    }
-                }
             }
         }
     }
