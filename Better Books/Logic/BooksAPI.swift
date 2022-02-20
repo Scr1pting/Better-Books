@@ -16,6 +16,12 @@ class BooksAPI: ObservableObject {
         
         let apiUrl = "https://www.googleapis.com/books/v1/volumes?q=\(String(describing: searchQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)))"
         
+        DispatchQueue.global(qos: .utility).async {
+            if InternetReachability.isConnectedToNetwork() {
+                self.imageCache.clearLocalCache()
+            }
+        }
+        
         URLSession(configuration: .default).dataTask(with: URL(string: apiUrl)!) { (data, _, err) in
             
             if err != nil{
@@ -49,6 +55,7 @@ class BooksAPI: ObservableObject {
                         return
                     }
                     
+                    #warning("Use optional chaning in production")
                     books.append(Book(id: id, title: title, authors: authors, description: description, image: Image(uiImage: image), url: url))
                 }
             }

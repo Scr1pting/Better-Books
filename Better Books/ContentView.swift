@@ -8,19 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel = ViewModel()
+    
     var body: some View {
-        NavigationView {
-            ScrollView {
-                Text("Hello, world!")
-                    .padding()
+        Home(viewModel: viewModel)
+            .onAppear {
+                viewModel.fetchFavoriteBooks()
             }
-            .navigationTitle("Better Books")
-            .toolbar {
-                ToolbarItem {
-                    Button("Test", action: {})
-                }
-            }
-        }
     }
 }
 

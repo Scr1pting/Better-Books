@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct Better_BooksApp: App {
@@ -15,6 +16,7 @@ struct Better_BooksApp: App {
         
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Optima-ExtraBlack", size: 19)!]
 
+        FirebaseApp.configure()
     }
     
     var body: some Scene {
