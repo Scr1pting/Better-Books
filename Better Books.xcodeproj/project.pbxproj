@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DDB1D1F527C2838100DD7D9B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDB1D1F427C2838100DD7D9B /* README.md */; };
+		DDB1D1F927C2856B00DD7D9B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D1F827C2856B00DD7D9B /* Book.swift */; };
+		DDB1D1FB27C2864000DD7D9B /* BooksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D1FA27C2864000DD7D9B /* BooksAPI.swift */; };
+		DDB1D1FE27C2872C00DD7D9B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1D1FD27C2872C00DD7D9B /* SwiftyJSON */; };
 		DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547327C282740090E36D /* Better_BooksApp.swift */; };
 		DDCC547627C282740090E36D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547527C282740090E36D /* ContentView.swift */; };
 		DDCC547827C282760090E36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547727C282760090E36D /* Assets.xcassets */; };
@@ -36,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		DDB1D1F427C2838100DD7D9B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		DDB1D1F827C2856B00DD7D9B /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		DDB1D1FA27C2864000DD7D9B /* BooksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksAPI.swift; sourceTree = "<group>"; };
 		DDCC547027C282740090E36D /* Better Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCC547327C282740090E36D /* Better_BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksApp.swift; sourceTree = "<group>"; };
 		DDCC547527C282740090E36D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB1D1FE27C2872C00DD7D9B /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +86,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		DDB1D1F727C2851100DD7D9B /* Models & ViewModels */ = {
+		DDB1D1F727C2851100DD7D9B /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				DDB1D1FA27C2864000DD7D9B /* BooksAPI.swift */,
+				DDB1D1F827C2856B00DD7D9B /* Book.swift */,
 			);
-			path = "Models & ViewModels";
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		DDCC546727C282740090E36D = {
@@ -114,7 +122,7 @@
 				DDCC547327C282740090E36D /* Better_BooksApp.swift */,
 				DDCC547527C282740090E36D /* ContentView.swift */,
 				DDB1D1F627C2850900DD7D9B /* Views */,
-				DDB1D1F727C2851100DD7D9B /* Models & ViewModels */,
+				DDB1D1F727C2851100DD7D9B /* Logic */,
 				DDCC547727C282760090E36D /* Assets.xcassets */,
 				DDCC547927C282760090E36D /* Preview Content */,
 			);
@@ -162,6 +170,9 @@
 			dependencies = (
 			);
 			name = "Better Books";
+			packageProductDependencies = (
+				DDB1D1FD27C2872C00DD7D9B /* SwiftyJSON */,
+			);
 			productName = "Better Books";
 			productReference = DDCC547027C282740090E36D /* Better Books.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +245,9 @@
 				Base,
 			);
 			mainGroup = DDCC546727C282740090E36D;
+			packageReferences = (
+				DDB1D1FC27C2872C00DD7D9B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = DDCC547127C282740090E36D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDCC547627C282740090E36D /* ContentView.swift in Sources */,
+				DDB1D1FB27C2864000DD7D9B /* BooksAPI.swift in Sources */,
 				DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */,
+				DDB1D1F927C2856B00DD7D9B /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDB1D1FC27C2872C00DD7D9B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDB1D1FD27C2872C00DD7D9B /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB1D1FC27C2872C00DD7D9B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDCC546827C282740090E36D /* Project object */;
 }
