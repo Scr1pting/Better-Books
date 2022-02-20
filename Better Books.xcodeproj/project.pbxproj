@@ -14,6 +14,9 @@
 		DDB1D20327C28B8300DD7D9B /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D20027C28B8300DD7D9B /* ImageCache.swift */; };
 		DDB1D20427C28B8300DD7D9B /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D20127C28B8300DD7D9B /* CacheType.swift */; };
 		DDB1D20527C28B8300DD7D9B /* CacheFileUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D20227C28B8300DD7D9B /* CacheFileUrl.swift */; };
+		DDB1D20827C2983000DD7D9B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1D20727C2983000DD7D9B /* FirebaseAnalytics */; };
+		DDB1D20A27C2983000DD7D9B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1D20927C2983000DD7D9B /* FirebaseFirestore */; };
+		DDB1D20D27C2995300DD7D9B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1D20C27C2995300DD7D9B /* KeychainAccess */; };
 		DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547327C282740090E36D /* Better_BooksApp.swift */; };
 		DDCC547627C282740090E36D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547527C282740090E36D /* ContentView.swift */; };
 		DDCC547827C282760090E36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547727C282760090E36D /* Assets.xcassets */; };
@@ -64,7 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB1D20D27C2995300DD7D9B /* KeychainAccess in Frameworks */,
+				DDB1D20827C2983000DD7D9B /* FirebaseAnalytics in Frameworks */,
 				DDB1D1FE27C2872C00DD7D9B /* SwiftyJSON in Frameworks */,
+				DDB1D20A27C2983000DD7D9B /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +195,9 @@
 			name = "Better Books";
 			packageProductDependencies = (
 				DDB1D1FD27C2872C00DD7D9B /* SwiftyJSON */,
+				DDB1D20727C2983000DD7D9B /* FirebaseAnalytics */,
+				DDB1D20927C2983000DD7D9B /* FirebaseFirestore */,
+				DDB1D20C27C2995300DD7D9B /* KeychainAccess */,
 			);
 			productName = "Better Books";
 			productReference = DDCC547027C282740090E36D /* Better Books.app */;
@@ -264,6 +273,8 @@
 			mainGroup = DDCC546727C282740090E36D;
 			packageReferences = (
 				DDB1D1FC27C2872C00DD7D9B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				DDB1D20627C2983000DD7D9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DDB1D20B27C2995300DD7D9B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = DDCC547127C282740090E36D /* Products */;
 			projectDirPath = "";
@@ -651,6 +662,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		DDB1D20627C2983000DD7D9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 7.11.1;
+			};
+		};
+		DDB1D20B27C2995300DD7D9B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -658,6 +685,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DDB1D1FC27C2872C00DD7D9B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		DDB1D20727C2983000DD7D9B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB1D20627C2983000DD7D9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DDB1D20927C2983000DD7D9B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB1D20627C2983000DD7D9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DDB1D20C27C2995300DD7D9B /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB1D20B27C2995300DD7D9B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

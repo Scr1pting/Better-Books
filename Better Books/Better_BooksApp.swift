@@ -11,9 +11,9 @@ import SwiftUI
 struct Better_BooksApp: App {
     
     init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 32)!]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Optima-ExtraBlack", size: 32)!]
         
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Georgia-Bold", size: 19)!]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "Optima-ExtraBlack", size: 19)!]
 
     }
     
