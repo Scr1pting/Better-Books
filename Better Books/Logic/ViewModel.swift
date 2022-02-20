@@ -17,6 +17,8 @@ class ViewModel: ObservableObject {
     
     @Published var favoriteBookIds = [String]()
     
+    @Published var finishedFetchingBooks = false
+    
     
     let keychain = Keychain(service: "de.the-cyborgs.Better-Books")
         .synchronizable(true)
@@ -63,6 +65,11 @@ class ViewModel: ObservableObject {
                             self.favoriteBooks.sort(by: { $0.title < $1.title })
                             
                             self.favoriteBookIds.append(bookId)
+                            
+                            if self.favoriteBookIds.count == usersFavoriteBooks.count {
+                                print(self.favoriteBookIds)
+                                self.generateRecommendations()
+                            }
                         }
                     }
                 }
@@ -78,13 +85,17 @@ class ViewModel: ObservableObject {
                 return
             }
             
-            var similarityScore = 0
-            var differentBooks = [Book]()
+            var differentBookIds = [String]()
             
             for bookId in user.favoriteBookIds {
-                if favoriteBookIds.contains(bookId) {
-                    similarityScore += 1
-//                    differentBooks.append(bookId)
+                if !favoriteBookIds.contains(bookId) {
+                    differentBookIds.append(bookId)
+                }
+            }
+            
+            if differentBookIds.count == 1 {
+                booksApi.getBook(id: differentBookIds[0]) { book in
+                    self.recommendedBooks.append(book)
                 }
             }
         }

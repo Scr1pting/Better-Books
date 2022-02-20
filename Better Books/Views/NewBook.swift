@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct NewBook: View {
+    
+    var viewModel: ViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct NewBook_Previews: PreviewProvider {
-    static var previews: some View {
-        NewBook()
+        Text("This version of Better Books does not support the addition of new books")
+            .padding()
     }
 }

@@ -9,24 +9,25 @@ import SwiftUI
 
 struct EmphasizedBookCard: View {
     
+    let book: Book
     let windowSize: CGSize
     
     var body: some View {
         HStack {
-            Image("Scythe-Book-Cover")
+            book.image
                 .resizable()
                 .scaledToFit()
                 .frame(width: abs(windowSize.width / 2 - 25))
                 .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 0) {
-                Text("Scythe is a great book and this is demo")
+                Text(book.title)
                     .font(Font.custom("Optima", size: 25, relativeTo: .title2))
                     .fontWeight(.bold)
                     .lineSpacing(1.4)
                     .padding(.bottom, 10)
                 
-                Text("Neal Shusterman")
+                Text(book.authors)
                     .font(.subheadline)
                 
                 Text("Recommended")
@@ -40,11 +41,5 @@ struct EmphasizedBookCard: View {
             .padding(.vertical, 20)
             .padding(.leading, 10)
         }
-    }
-}
-
-struct EmphasizedBookCard_Previews: PreviewProvider {
-    static var previews: some View {
-        EmphasizedBookCard(windowSize: CGSize(width: 400, height: 700))
     }
 }

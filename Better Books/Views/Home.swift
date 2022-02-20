@@ -20,15 +20,38 @@ struct Home: View {
             GeometryReader { geometry in
                 ScrollView {
                     VStack(alignment: .leading) {
-                        EmphasizedBookCard(windowSize: geometry.size)
-                            .padding(.top, 7.5)
-                            .padding(.horizontal)
+                        if viewModel.recommendedBooks.count > 0 {
+                            EmphasizedBookCard(book: viewModel.recommendedBooks.first!, windowSize: geometry.size)
+                                .padding(.top, 7.5)
+                                .padding(.bottom, 10)
+                                .padding(.horizontal)
+                        } else {
+                            Text("No recommended books found 😭. Check back later of change your book selections")
+                                .padding(.top, 7.5)
+                                .padding(.horizontal)
+                        }
+                        
+                        if viewModel.recommendedBooks.count > 1 {
+                            Text("Recommendations")
+                                .font(Font.custom("Optima", size: 28, relativeTo: .title2))
+                                .fontWeight(.black)
+                                .padding(.top, 20)
+                            
+                            LazyVGrid(columns: bookCardsColumns) {
+                                ForEach(1..<viewModel.recommendedBooks.prefix(4).count) { index in
+                                    DefaultBookCard(book: viewModel.recommendedBooks[index])
+                                }
+                                
+                                ManageFavoritesLink(viewModel: viewModel)
+                            }
+                            .padding(.horizontal, 10)
+                        }
                         
                         HStack(alignment: .bottom) {
                             Text("Favorites")
                                 .font(Font.custom("Optima", size: 28, relativeTo: .title2))
                                 .fontWeight(.black)
-                                .padding(.top, 30)
+                                .padding(.top, 20)
                             
                             Spacer()
                             
@@ -41,7 +64,7 @@ struct Home: View {
                                 }
                                 .padding(.bottom, 5)
                                 .sheet(isPresented: $showNewBookSheet) {
-                                    NewBook()
+                                    NewBook(viewModel: viewModel)
                                 }
                             } else {
                                 Text("5/5")

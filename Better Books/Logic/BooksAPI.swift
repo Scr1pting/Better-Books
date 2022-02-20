@@ -38,7 +38,7 @@ class BooksAPI: ObservableObject {
             }
             
             let description = json["volumeInfo"]["description"].stringValue
-            let imageUrl = URL(string: json["volumeInfo"]["imageLinks"]["large"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
+            let imageUrl = URL(string: json["volumeInfo"]["imageLinks"]["large"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? URL(string: json["volumeInfo"]["imageLinks"]["thumbnail"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? Url(string: )
             let url = URL(string: json["volumeInfo"]["previewLink"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
             
             self.imageCache.loadImage(atUrl: imageUrl, key: id) { (urlString, image) in
@@ -74,7 +74,7 @@ class BooksAPI: ObservableObject {
                 let title = item["volumeInfo"]["title"].stringValue
                 var authors = ""
                 
-                for i in item["volumeInfo"]["authors"].array! {
+                for i in item["volumeInfo"]["authors"].array ?? [] {
                     authors += "\(i.stringValue)"
                 }
                 
