@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547327C282740090E36D /* Better_BooksApp.swift */; };
+		DDCC547627C282740090E36D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547527C282740090E36D /* ContentView.swift */; };
+		DDCC547827C282760090E36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547727C282760090E36D /* Assets.xcassets */; };
+		DDCC547B27C282760090E36D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547A27C282760090E36D /* Preview Assets.xcassets */; };
+		DDCC548527C282760090E36D /* Better_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC548427C282760090E36D /* Better_BooksTests.swift */; };
+		DDCC548F27C282760090E36D /* Better_BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC548E27C282760090E36D /* Better_BooksUITests.swift */; };
+		DDCC549127C282760090E36D /* Better_BooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC549027C282760090E36D /* Better_BooksUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDCC548127C282760090E36D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDCC546827C282740090E36D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDCC546F27C282740090E36D;
+			remoteInfo = "Better Books";
+		};
+		DDCC548B27C282760090E36D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDCC546827C282740090E36D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDCC546F27C282740090E36D;
+			remoteInfo = "Better Books";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DDCC547027C282740090E36D /* Better Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCC547327C282740090E36D /* Better_BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksApp.swift; sourceTree = "<group>"; };
+		DDCC547527C282740090E36D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DDCC547727C282760090E36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDCC547A27C282760090E36D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDCC548027C282760090E36D /* Better BooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better BooksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCC548427C282760090E36D /* Better_BooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksTests.swift; sourceTree = "<group>"; };
+		DDCC548A27C282760090E36D /* Better BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better BooksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCC548E27C282760090E36D /* Better_BooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksUITests.swift; sourceTree = "<group>"; };
+		DDCC549027C282760090E36D /* Better_BooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDCC546D27C282740090E36D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCC547D27C282760090E36D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCC548727C282760090E36D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDCC546727C282740090E36D = {
+			isa = PBXGroup;
+			children = (
+				DDCC547227C282740090E36D /* Better Books */,
+				DDCC548327C282760090E36D /* Better BooksTests */,
+				DDCC548D27C282760090E36D /* Better BooksUITests */,
+				DDCC547127C282740090E36D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDCC547127C282740090E36D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDCC547027C282740090E36D /* Better Books.app */,
+				DDCC548027C282760090E36D /* Better BooksTests.xctest */,
+				DDCC548A27C282760090E36D /* Better BooksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDCC547227C282740090E36D /* Better Books */ = {
+			isa = PBXGroup;
+			children = (
+				DDCC547327C282740090E36D /* Better_BooksApp.swift */,
+				DDCC547527C282740090E36D /* ContentView.swift */,
+				DDCC547727C282760090E36D /* Assets.xcassets */,
+				DDCC547927C282760090E36D /* Preview Content */,
+			);
+			path = "Better Books";
+			sourceTree = "<group>";
+		};
+		DDCC547927C282760090E36D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DDCC547A27C282760090E36D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDCC548327C282760090E36D /* Better BooksTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDCC548427C282760090E36D /* Better_BooksTests.swift */,
+			);
+			path = "Better BooksTests";
+			sourceTree = "<group>";
+		};
+		DDCC548D27C282760090E36D /* Better BooksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DDCC548E27C282760090E36D /* Better_BooksUITests.swift */,
+				DDCC549027C282760090E36D /* Better_BooksUITestsLaunchTests.swift */,
+			);
+			path = "Better BooksUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDCC546F27C282740090E36D /* Better Books */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCC549427C282760090E36D /* Build configuration list for PBXNativeTarget "Better Books" */;
+			buildPhases = (
+				DDCC546C27C282740090E36D /* Sources */,
+				DDCC546D27C282740090E36D /* Frameworks */,
+				DDCC546E27C282740090E36D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Better Books";
+			productName = "Better Books";
+			productReference = DDCC547027C282740090E36D /* Better Books.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDCC547F27C282760090E36D /* Better BooksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCC549727C282760090E36D /* Build configuration list for PBXNativeTarget "Better BooksTests" */;
+			buildPhases = (
+				DDCC547C27C282760090E36D /* Sources */,
+				DDCC547D27C282760090E36D /* Frameworks */,
+				DDCC547E27C282760090E36D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDCC548227C282760090E36D /* PBXTargetDependency */,
+			);
+			name = "Better BooksTests";
+			productName = "Better BooksTests";
+			productReference = DDCC548027C282760090E36D /* Better BooksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DDCC548927C282760090E36D /* Better BooksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDCC549A27C282760090E36D /* Build configuration list for PBXNativeTarget "Better BooksUITests" */;
+			buildPhases = (
+				DDCC548627C282760090E36D /* Sources */,
+				DDCC548727C282760090E36D /* Frameworks */,
+				DDCC548827C282760090E36D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDCC548C27C282760090E36D /* PBXTargetDependency */,
+			);
+			name = "Better BooksUITests";
+			productName = "Better BooksUITests";
+			productReference = DDCC548A27C282760090E36D /* Better BooksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDCC546827C282740090E36D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					DDCC546F27C282740090E36D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					DDCC547F27C282760090E36D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = DDCC546F27C282740090E36D;
+					};
+					DDCC548927C282760090E36D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = DDCC546F27C282740090E36D;
+					};
+				};
+			};
+			buildConfigurationList = DDCC546B27C282740090E36D /* Build configuration list for PBXProject "Better Books" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDCC546727C282740090E36D;
+			productRefGroup = DDCC547127C282740090E36D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDCC546F27C282740090E36D /* Better Books */,
+				DDCC547F27C282760090E36D /* Better BooksTests */,
+				DDCC548927C282760090E36D /* Better BooksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDCC546E27C282740090E36D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCC547B27C282760090E36D /* Preview Assets.xcassets in Resources */,
+				DDCC547827C282760090E36D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCC547E27C282760090E36D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCC548827C282760090E36D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDCC546C27C282740090E36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCC547627C282740090E36D /* ContentView.swift in Sources */,
+				DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCC547C27C282760090E36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCC548527C282760090E36D /* Better_BooksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCC548627C282760090E36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDCC548F27C282760090E36D /* Better_BooksUITests.swift in Sources */,
+				DDCC549127C282760090E36D /* Better_BooksUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDCC548227C282760090E36D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDCC546F27C282740090E36D /* Better Books */;
+			targetProxy = DDCC548127C282760090E36D /* PBXContainerItemProxy */;
+		};
+		DDCC548C27C282760090E36D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDCC546F27C282740090E36D /* Better Books */;
+			targetProxy = DDCC548B27C282760090E36D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DDCC549227C282760090E36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DDCC549327C282760090E36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDCC549527C282760090E36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Better Books/Preview Content\"";
+				DEVELOPMENT_TEAM = R9RV3BGXM5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bordet.Better-Books";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDCC549627C282760090E36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Better Books/Preview Content\"";
+				DEVELOPMENT_TEAM = R9RV3BGXM5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bordet.Better-Books";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DDCC549827C282760090E36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R9RV3BGXM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bordet.Better-BooksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Books.app/Better Books";
+			};
+			name = Debug;
+		};
+		DDCC549927C282760090E36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R9RV3BGXM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bordet.Better-BooksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Better Books.app/Better Books";
+			};
+			name = Release;
+		};
+		DDCC549B27C282760090E36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R9RV3BGXM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bordet.Better-BooksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Better Books";
+			};
+			name = Debug;
+		};
+		DDCC549C27C282760090E36D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R9RV3BGXM5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bordet.Better-BooksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Better Books";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDCC546B27C282740090E36D /* Build configuration list for PBXProject "Better Books" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCC549227C282760090E36D /* Debug */,
+				DDCC549327C282760090E36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCC549427C282760090E36D /* Build configuration list for PBXNativeTarget "Better Books" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCC549527C282760090E36D /* Debug */,
+				DDCC549627C282760090E36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCC549727C282760090E36D /* Build configuration list for PBXNativeTarget "Better BooksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCC549827C282760090E36D /* Debug */,
+				DDCC549927C282760090E36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDCC549A27C282760090E36D /* Build configuration list for PBXNativeTarget "Better BooksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDCC549B27C282760090E36D /* Debug */,
+				DDCC549C27C282760090E36D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDCC546827C282740090E36D /* Project object */;
+}
