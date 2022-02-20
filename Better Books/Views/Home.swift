@@ -11,7 +11,7 @@ struct Home: View {
     
     @ObservedObject var viewModel: ViewModel
     
-    var bookCardsColumns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    var bookCardsColumns: [GridItem] = Array(repeating: .init(.flexible(), alignment: .top), count: 2)
     
     @State var showNewBookSheet = false
     
@@ -53,9 +53,10 @@ struct Home: View {
                         .padding(.horizontal)
                         
                         LazyVGrid(columns: bookCardsColumns) {
-                            DefaultBookCard()
-                            DefaultBookCard()
-                            DefaultBookCard()
+                            ForEach(viewModel.favoriteBooks.prefix(3)) { book in
+                                DefaultBookCard(book: book)
+                            }
+                            
                             ManageFavoritesLink()
                         }
                         .padding(.horizontal, 10)

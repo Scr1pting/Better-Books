@@ -9,18 +9,52 @@ import SwiftUI
 import SwiftyJSON
 
 class BooksAPI: ObservableObject {
-
+    
     let imageCache = ImageCache()
     
-    func getBooksList(searchQuery: String, completion: @escaping ([Book]) -> Void) {
-        
-        let apiUrl = "https://www.googleapis.com/books/v1/volumes?q=\(String(describing: searchQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)))"
+    func getBook(id: String, completion: @escaping (Book) -> Void) {
+        let apiUrl = "https://www.googleapis.com/books/v1/volumes/\(id)"
         
         DispatchQueue.global(qos: .utility).async {
             if InternetReachability.isConnectedToNetwork() {
                 self.imageCache.clearLocalCache()
             }
         }
+        
+        URLSession(configuration: .default).dataTask(with: URL(string: apiUrl)!) { (data, _, err) in
+            if err != nil{
+                print((err?.localizedDescription)!)
+                return
+            }
+            
+            let json = try! JSON(data: data!)
+            
+            let id = json["id"].stringValue
+            let title = json["volumeInfo"]["title"].stringValue
+            var authors = ""
+            
+            for i in json["volumeInfo"]["authors"].array! {
+                authors += "\(i.stringValue)"
+            }
+            
+            let description = json["volumeInfo"]["description"].stringValue
+            let imageUrl = URL(string: json["volumeInfo"]["imageLinks"]["large"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
+            let url = URL(string: json["volumeInfo"]["previewLink"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
+            
+            self.imageCache.loadImage(atUrl: imageUrl, key: id) { (urlString, image) in
+                guard let image = image else {
+                    return
+                }
+                
+                completion(Book(id: id, title: title, authors: authors, description: description, image: Image(uiImage: image), url: url))
+            }
+            
+        }.resume()
+    }
+    
+    func bookSearch(query: String, completion: @escaping ([Book]) -> Void) {
+        
+        let apiUrl = "https://www.googleapis.com/books/v1/volumes?q=\(String(describing: query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)))"
         
         URLSession(configuration: .default).dataTask(with: URL(string: apiUrl)!) { (data, _, err) in
             
@@ -48,19 +82,20 @@ class BooksAPI: ObservableObject {
                 let imageUrl = URL(string: item["volumeInfo"]["imageLinks"]["thumbnail"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
                 let url = URL(string: item["volumeInfo"]["previewLink"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
                 
-                self.imageCache.loadImage(atUrl: imageUrl, key: id) { (urlString, image) in
-                    guard let image = image else {
-                        
-                        
+                URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+                    guard let data = data, let image = UIImage(data: data) else {
+                        print("An unknown error occured while downloading the book image")
                         return
                     }
                     
-                    #warning("Use optional chaning in production")
                     books.append(Book(id: id, title: title, authors: authors, description: description, image: Image(uiImage: image), url: url))
+                    
+                    if books.count == items.count {
+                        completion(books)
+                    }
                 }
+                .resume()
             }
-            
-            completion(books)
             
         }.resume()
     }

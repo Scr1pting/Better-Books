@@ -10,24 +10,29 @@ import FirebaseFirestore
 import KeychainAccess
 
 class ViewModel: ObservableObject {
-    @Published var favoriteBooks = [Book]()
     
+    @Published var favoriteBooks = [Book]()
     @Published var allUsers = [User]()
+    
     
     let keychain = Keychain(service: "de.the-cyborgs.Better-Books")
         .synchronizable(true)
     
-    var userId: UUID {
+    var userId: String {
         if keychain["userId"] != nil {
-            return UUID(uuidString: keychain["userId"] ?? "") ?? UUID()
+//            return keychain["userId"] ?? ""
+            return "Te2CAwUnghJ81BJbnp7v"
         } else {
-            let internalUserID = UUID()
-            keychain["userId"] = internalUserID.uuidString
+            let internalUserID = UUID().uuidString
+            keychain["userId"] = internalUserID
             return internalUserID
         }
     }
     
+    
     private let db = Firestore.firestore()
+    private let booksApi = BooksAPI()
+    
     
     func fetchFavoriteBooks() {
         let docRef = db
@@ -48,10 +53,17 @@ class ViewModel: ObservableObject {
                 let userId = docSnapshot.documentID
                 let usersFavoriteBooks = data["books"] as? [String] ?? []
                 
+                if userId == self.userId {
+                    for bookId in usersFavoriteBooks {
+                        self.booksApi.getBook(id: bookId) { book in
+                            self.favoriteBooks.append(book)
+                            self.favoriteBooks.sort(by: { $0.title < $1.title })
+                        }
+                    }
+                }
+                
                 self.allUsers.append(User(id: userId, favoriteBookIds: usersFavoriteBooks))
             }
-            
-            print("All Users: \(self.allUsers)")
         }
     }
 }

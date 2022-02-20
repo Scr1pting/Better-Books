@@ -17,7 +17,7 @@ struct EmphasizedBookCard: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: abs(windowSize.width / 2 - 25))
-                .cornerRadius(15)
+                .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("Scythe is a great book and this is demo")

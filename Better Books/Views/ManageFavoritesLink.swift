@@ -9,18 +9,24 @@ import SwiftUI
 
 struct ManageFavoritesLink: View {
     var body: some View {
-        NavigationLink(destination: Text("Hello World")) {
-            Circle()
-                .foregroundColor(.accentColor)
-                .opacity(0.3)
-                .overlay(
-                    Image(systemName: "ellipsis")
-                        .font(.system(size: 40))
-                        .foregroundColor(Color(.systemBackground))
-                )
-                .frame(width: 95, height: 95)
+        VStack {
+            Spacer()
+            
+            NavigationLink(destination: Text("Hello World")) {
+                Circle()
+                    .foregroundColor(.accentColor)
+                    .opacity(0.3)
+                    .overlay(
+                        Image(systemName: "ellipsis")
+                            .font(.system(size: 40))
+                            .foregroundColor(Color(.systemBackground))
+                    )
+                    .frame(width: 95, height: 95)
+            }
+            .padding(.bottom, 30)
+            
+            Spacer()
         }
-        .padding(.bottom, 30)
     }
 }
 

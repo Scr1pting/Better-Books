@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct DefaultBookCard: View {
+    
+    let book: Book
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Image("Scythe-Book-Cover")
+            book.image
                 .resizable()
                 .scaledToFit()
-                .cornerRadius(15)
+                .cornerRadius(10)
             
-            Text("Scythe")
+            Text(book.title)
                 .font(Font.custom("Optima", size: 22, relativeTo: .title3))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.leading)
@@ -24,11 +27,5 @@ struct DefaultBookCard: View {
         }
         .padding(.horizontal, 5)
         .padding(.bottom, 20)
-    }
-}
-
-struct DefaultBookCard_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultBookCard()
     }
 }
