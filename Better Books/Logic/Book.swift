@@ -5,13 +5,13 @@
 //  Created by Jonas on 20.02.22.
 //
 
-import Foundation
+import SwiftUI
 
-struct Book : Identifiable {
-    var id: String
-    var title: String
-    var authors: String
-    var desc: String
-    var imageUrl: String
-    var url: String
+struct Book: Identifiable {
+    let id: String
+    let title: String
+    let authors: String
+    let description: String
+    let image: Image
+    let url: URL
 }

@@ -5,11 +5,13 @@
 //  Created by Jonas on 20.02.22.
 //
 
-import Foundation
+import SwiftUI
 import SwiftyJSON
 
 class BooksAPI: ObservableObject {
 
+    let imageCache = ImageCache()
+    
     func getBooksList(searchQuery: String, completion: @escaping ([Book]) -> Void) {
         
         let apiUrl = "https://www.googleapis.com/books/v1/volumes?q=\(String(describing: searchQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)))"
@@ -30,18 +32,25 @@ class BooksAPI: ObservableObject {
                 
                 let id = item["id"].stringValue
                 let title = item["volumeInfo"]["title"].stringValue
-                let authors = item["volumeInfo"]["authors"].array!
-                var author = ""
+                var authors = ""
                 
-                for i in authors {
-                    author += "\(i.stringValue)"
+                for i in item["volumeInfo"]["authors"].array! {
+                    authors += "\(i.stringValue)"
                 }
                 
                 let description = item["volumeInfo"]["description"].stringValue
-                let imurl = item["volumeInfo"]["imageLinks"]["thumbnail"].stringValue
-                let url1 = item["volumeInfo"]["previewLink"].stringValue
+                let imageUrl = URL(string: item["volumeInfo"]["imageLinks"]["thumbnail"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
+                let url = URL(string: item["volumeInfo"]["previewLink"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
                 
-                books.append(Book(id: id, title: title, authors: author, desc: description, imageUrl: imurl, url: url1))
+                self.imageCache.loadImage(atUrl: imageUrl, key: id) { (urlString, image) in
+                    guard let image = image else {
+                        
+                        
+                        return
+                    }
+                    
+                    books.append(Book(id: id, title: title, authors: authors, description: description, image: Image(uiImage: image), url: url))
+                }
             }
             
             completion(books)

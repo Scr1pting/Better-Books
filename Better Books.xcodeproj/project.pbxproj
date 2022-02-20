@@ -139,8 +139,8 @@
 				DDCC547527C282740090E36D /* ContentView.swift */,
 				DDB1D1F627C2850900DD7D9B /* Views */,
 				DDB1D1F727C2851100DD7D9B /* Logic */,
-				DDCC547727C282760090E36D /* Assets.xcassets */,
 				DDB1D1FF27C28B8300DD7D9B /* Caching */,
+				DDCC547727C282760090E36D /* Assets.xcassets */,
 				DDCC547927C282760090E36D /* Preview Content */,
 			);
 			path = "Better Books";
