@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ManageFavoritesLink: View {
+    
+    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
         VStack {
             Spacer()
             
-            NavigationLink(destination: Text("Hello World")) {
+            NavigationLink(destination: ManageFavorites(viewModel: viewModel)) {
                 Circle()
                     .foregroundColor(.accentColor)
                     .opacity(0.3)
@@ -27,11 +30,5 @@ struct ManageFavoritesLink: View {
             
             Spacer()
         }
-    }
-}
-
-struct MoreBooks_Previews: PreviewProvider {
-    static var previews: some View {
-        ManageFavoritesLink()
     }
 }

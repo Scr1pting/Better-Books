@@ -57,7 +57,7 @@ struct Home: View {
                                 DefaultBookCard(book: book)
                             }
                             
-                            ManageFavoritesLink()
+                            ManageFavoritesLink(viewModel: viewModel)
                         }
                         .padding(.horizontal, 10)
                     }

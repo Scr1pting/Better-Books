@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         Home(viewModel: viewModel)
             .onAppear {
-                viewModel.fetchFavoriteBooks()
+                viewModel.fetchUserBooks()
             }
     }
 }

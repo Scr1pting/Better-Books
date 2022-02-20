@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ManageFavorites: View {
+    
+    @ObservedObject var viewModel: ViewModel
+    
+    var bookCardsColumns: [GridItem] = Array(repeating: .init(.flexible(), alignment: .top), count: 2)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ManageFavorites_Previews: PreviewProvider {
-    static var previews: some View {
-        ManageFavorites()
+        ScrollView {
+            LazyVGrid(columns: bookCardsColumns) {
+                ForEach(viewModel.favoriteBooks) { book in
+                    DefaultBookCard(book: book)
+                }
+            }
+            .padding(.top, 7.5)
+            .padding(.horizontal, 10)
+        }
+        .navigationTitle("Favorites")
     }
 }

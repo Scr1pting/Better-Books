@@ -12,7 +12,10 @@ import KeychainAccess
 class ViewModel: ObservableObject {
     
     @Published var favoriteBooks = [Book]()
+    @Published var recommendedBooks = [Book]()
     @Published var allUsers = [User]()
+    
+    @Published var favoriteBookIds = [String]()
     
     
     let keychain = Keychain(service: "de.the-cyborgs.Better-Books")
@@ -34,7 +37,7 @@ class ViewModel: ObservableObject {
     private let booksApi = BooksAPI()
     
     
-    func fetchFavoriteBooks() {
+    func fetchUserBooks() {
         let docRef = db
             .collection("users")
         
@@ -58,11 +61,31 @@ class ViewModel: ObservableObject {
                         self.booksApi.getBook(id: bookId) { book in
                             self.favoriteBooks.append(book)
                             self.favoriteBooks.sort(by: { $0.title < $1.title })
+                            
+                            self.favoriteBookIds.append(bookId)
                         }
                     }
                 }
                 
                 self.allUsers.append(User(id: userId, favoriteBookIds: usersFavoriteBooks))
+            }
+        }
+    }
+    
+    func generateRecommendations() {
+        for user in allUsers {
+            guard user.favoriteBookIds.count == 5 else {
+                return
+            }
+            
+            var similarityScore = 0
+            var differentBooks = [Book]()
+            
+            for bookId in user.favoriteBookIds {
+                if favoriteBookIds.contains(bookId) {
+                    similarityScore += 1
+//                    differentBooks.append(bookId)
+                }
             }
         }
     }
