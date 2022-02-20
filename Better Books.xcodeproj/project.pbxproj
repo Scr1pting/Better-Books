@@ -20,7 +20,6 @@
 		DDB1D20F27C299BD00DD7D9B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D20E27C299BC00DD7D9B /* ViewModel.swift */; };
 		DDB1D21127C29B0400DD7D9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDB1D21027C29B0400DD7D9B /* GoogleService-Info.plist */; };
 		DDB1D21327C29C6F00DD7D9B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D21227C29C6F00DD7D9B /* UserModel.swift */; };
-		DDB1D21927C29DB000DD7D9B /* Date+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D21527C29DB000DD7D9B /* Date+StringRepresentation.swift */; };
 		DDB1D21A27C29DB000DD7D9B /* InternetReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D21627C29DB000DD7D9B /* InternetReachability.swift */; };
 		DDB1D21C27C29DB000DD7D9B /* Collection+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D21827C29DB000DD7D9B /* Collection+Contains.swift */; };
 		DDB1D22027C2A3FA00DD7D9B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D21F27C2A3FA00DD7D9B /* Home.swift */; };
@@ -32,6 +31,7 @@
 		DDB1D22D27C2CB0400DD7D9B /* ManageFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22C27C2CB0300DD7D9B /* ManageFavorites.swift */; };
 		DDB1D22F27C2DD5300DD7D9B /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22E27C2DD5300DD7D9B /* BookDetailView.swift */; };
 		DDB1D23127C2E10700DD7D9B /* String+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D23027C2E10700DD7D9B /* String+HTML.swift */; };
+		DDB1D23527C2EA9700DD7D9B /* Acknowledgments.md in Resources */ = {isa = PBXBuildFile; fileRef = DDB1D23427C2EA8F00DD7D9B /* Acknowledgments.md */; };
 		DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547327C282740090E36D /* Better_BooksApp.swift */; };
 		DDCC547627C282740090E36D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547527C282740090E36D /* ContentView.swift */; };
 		DDCC547827C282760090E36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547727C282760090E36D /* Assets.xcassets */; };
@@ -68,7 +68,6 @@
 		DDB1D20E27C299BC00DD7D9B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DDB1D21027C29B0400DD7D9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDB1D21227C29C6F00DD7D9B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		DDB1D21527C29DB000DD7D9B /* Date+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+StringRepresentation.swift"; sourceTree = "<group>"; };
 		DDB1D21627C29DB000DD7D9B /* InternetReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetReachability.swift; sourceTree = "<group>"; };
 		DDB1D21827C29DB000DD7D9B /* Collection+Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Contains.swift"; sourceTree = "<group>"; };
 		DDB1D21F27C2A3FA00DD7D9B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		DDB1D22C27C2CB0300DD7D9B /* ManageFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavorites.swift; sourceTree = "<group>"; };
 		DDB1D22E27C2DD5300DD7D9B /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		DDB1D23027C2E10700DD7D9B /* String+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTML.swift"; sourceTree = "<group>"; };
+		DDB1D23427C2EA8F00DD7D9B /* Acknowledgments.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Acknowledgments.md; sourceTree = "<group>"; };
 		DDCC547027C282740090E36D /* Better Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCC547327C282740090E36D /* Better_BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksApp.swift; sourceTree = "<group>"; };
 		DDCC547527C282740090E36D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,10 +159,9 @@
 		DDB1D21427C29DB000DD7D9B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				DDB1D21527C29DB000DD7D9B /* Date+StringRepresentation.swift */,
+				DDB1D23027C2E10700DD7D9B /* String+HTML.swift */,
 				DDB1D21627C29DB000DD7D9B /* InternetReachability.swift */,
 				DDB1D21827C29DB000DD7D9B /* Collection+Contains.swift */,
-				DDB1D23027C2E10700DD7D9B /* String+HTML.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 				DDCC548327C282760090E36D /* Better BooksTests */,
 				DDCC548D27C282760090E36D /* Better BooksUITests */,
 				DDB1D1F427C2838100DD7D9B /* README.md */,
+				DDB1D23427C2EA8F00DD7D9B /* Acknowledgments.md */,
 				DDCC547127C282740090E36D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -358,6 +358,7 @@
 				DDCC547B27C282760090E36D /* Preview Assets.xcassets in Resources */,
 				DDB1D22927C2B18500DD7D9B /* LaunchScreen.storyboard in Resources */,
 				DDCC547827C282760090E36D /* Assets.xcassets in Resources */,
+				DDB1D23527C2EA9700DD7D9B /* Acknowledgments.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +386,6 @@
 				DDB1D22D27C2CB0400DD7D9B /* ManageFavorites.swift in Sources */,
 				DDB1D20327C28B8300DD7D9B /* ImageCache.swift in Sources */,
 				DDB1D22527C2AA7100DD7D9B /* DefaultBookCard.swift in Sources */,
-				DDB1D21927C29DB000DD7D9B /* Date+StringRepresentation.swift in Sources */,
 				DDB1D22F27C2DD5300DD7D9B /* BookDetailView.swift in Sources */,
 				DDB1D21C27C29DB000DD7D9B /* Collection+Contains.swift in Sources */,
 				DDCC547627C282740090E36D /* ContentView.swift in Sources */,
