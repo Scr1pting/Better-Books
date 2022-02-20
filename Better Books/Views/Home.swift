@@ -32,17 +32,16 @@ struct Home: View {
                         }
                         
                         if viewModel.recommendedBooks.count > 1 {
-                            Text("Recommendations")
+                            Text("Other Recommendations")
                                 .font(Font.custom("Optima", size: 28, relativeTo: .title2))
                                 .fontWeight(.black)
-                                .padding(.top, 20)
+                                .padding(.top, 15)
+                                .padding(.horizontal)
                             
                             LazyVGrid(columns: bookCardsColumns) {
                                 ForEach(1..<viewModel.recommendedBooks.prefix(4).count) { index in
                                     DefaultBookCard(book: viewModel.recommendedBooks[index])
                                 }
-                                
-                                ManageFavoritesLink(viewModel: viewModel)
                             }
                             .padding(.horizontal, 10)
                         }
@@ -51,7 +50,7 @@ struct Home: View {
                             Text("Favorites")
                                 .font(Font.custom("Optima", size: 28, relativeTo: .title2))
                                 .fontWeight(.black)
-                                .padding(.top, 20)
+                                .padding(.top, 15)
                             
                             Spacer()
                             

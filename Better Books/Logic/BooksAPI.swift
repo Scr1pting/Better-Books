@@ -38,15 +38,19 @@ class BooksAPI: ObservableObject {
             }
             
             let description = json["volumeInfo"]["description"].stringValue
-            let imageUrl = URL(string: json["volumeInfo"]["imageLinks"]["large"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? URL(string: json["volumeInfo"]["imageLinks"]["thumbnail"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? Url(string: )
-            let url = URL(string: json["volumeInfo"]["previewLink"].stringValue.replacingOccurrences(of: "http://", with: "https://"))!
+            let imageUrl = URL(string: json["volumeInfo"]["imageLinks"]["large"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? URL(string: json["volumeInfo"]["imageLinks"]["small"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? URL(string: json["volumeInfo"]["imageLinks"]["thumbnail"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? URL(string: "https://no-image-available.com")!
+            let url = URL(string: json["volumeInfo"]["previewLink"].stringValue.replacingOccurrences(of: "http://", with: "https://")) ?? URL(string: "https://example.com")!
             
-            self.imageCache.loadImage(atUrl: imageUrl, key: id) { (urlString, image) in
-                guard let image = image else {
-                    return
+            if imageUrl.absoluteString != "https://no-image-available.com" {
+                self.imageCache.loadImage(atUrl: imageUrl, key: id) { (urlString, image) in
+                    guard let image = image else {
+                        return
+                    }
+                    
+                    completion(Book(id: id, title: title, authors: authors, description: description, image: Image(uiImage: image), url: url))
                 }
-                
-                completion(Book(id: id, title: title, authors: authors, description: description, image: Image(uiImage: image), url: url))
+            } else {
+                completion(Book(id: id, title: title, authors: authors, description: description, image: Image("ImageUnavailbe"), url: url))
             }
             
         }.resume()
