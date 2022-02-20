@@ -40,11 +40,13 @@ class ViewModel: ObservableObject {
                 return
             }
             
+            print(documents)
+            
             documents.forEach { docSnapshot in
                 let data = docSnapshot.data()
                 
                 let userId = docSnapshot.documentID
-                var usersFavoriteBooks = data["books"] as? [String] ?? []
+                let usersFavoriteBooks = data["books"] as? [String] ?? []
                 
                 self.allUsers.append(User(id: userId, favoriteBookIds: usersFavoriteBooks))
             }

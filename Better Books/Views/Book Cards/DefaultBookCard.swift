@@ -13,16 +13,17 @@ struct DefaultBookCard: View {
             Image("Scythe-Book-Cover")
                 .resizable()
                 .scaledToFit()
-                .cornerRadius(10)
+                .cornerRadius(15)
             
             Text("Scythe")
-                .font(Font.custom("Optima", size: 20, relativeTo: .title3))
+                .font(Font.custom("Optima", size: 22, relativeTo: .title3))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.leading)
-                .padding(.top, 5)
+                .padding(.top, 6)
                 .padding(.bottom, 2.5)
         }
         .padding(.horizontal, 5)
+        .padding(.bottom, 20)
     }
 }
 

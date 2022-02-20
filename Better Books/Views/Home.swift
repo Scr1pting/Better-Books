@@ -55,6 +55,8 @@ struct Home: View {
                         LazyVGrid(columns: bookCardsColumns) {
                             DefaultBookCard()
                             DefaultBookCard()
+                            DefaultBookCard()
+                            ManageFavoritesLink()
                         }
                         .padding(.horizontal, 10)
                     }
