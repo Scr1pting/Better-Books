@@ -29,6 +29,7 @@
 		DDB1D22727C2B05D00DD7D9B /* NewBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22627C2B05D00DD7D9B /* NewBook.swift */; };
 		DDB1D22927C2B18500DD7D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB1D22827C2B18300DD7D9B /* LaunchScreen.storyboard */; };
 		DDB1D22B27C2B72600DD7D9B /* ManageFavoritesLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22A27C2B72600DD7D9B /* ManageFavoritesLink.swift */; };
+		DDB1D22D27C2CB0400DD7D9B /* ManageFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1D22C27C2CB0300DD7D9B /* ManageFavorites.swift */; };
 		DDCC547427C282740090E36D /* Better_BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547327C282740090E36D /* Better_BooksApp.swift */; };
 		DDCC547627C282740090E36D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCC547527C282740090E36D /* ContentView.swift */; };
 		DDCC547827C282760090E36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDCC547727C282760090E36D /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		DDB1D22627C2B05D00DD7D9B /* NewBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBook.swift; sourceTree = "<group>"; };
 		DDB1D22827C2B18300DD7D9B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB1D22A27C2B72600DD7D9B /* ManageFavoritesLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavoritesLink.swift; sourceTree = "<group>"; };
+		DDB1D22C27C2CB0300DD7D9B /* ManageFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageFavorites.swift; sourceTree = "<group>"; };
 		DDCC547027C282740090E36D /* Better Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better Books.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCC547327C282740090E36D /* Better_BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_BooksApp.swift; sourceTree = "<group>"; };
 		DDCC547527C282740090E36D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				DDB1D21F27C2A3FA00DD7D9B /* Home.swift */,
 				DDB1D22627C2B05D00DD7D9B /* NewBook.swift */,
 				DDB1D22A27C2B72600DD7D9B /* ManageFavoritesLink.swift */,
+				DDB1D22C27C2CB0300DD7D9B /* ManageFavorites.swift */,
 				DDB1D22127C2A67500DD7D9B /* Book Cards */,
 			);
 			path = Views;
@@ -373,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB1D22D27C2CB0400DD7D9B /* ManageFavorites.swift in Sources */,
 				DDB1D20327C28B8300DD7D9B /* ImageCache.swift in Sources */,
 				DDB1D22527C2AA7100DD7D9B /* DefaultBookCard.swift in Sources */,
 				DDB1D21927C29DB000DD7D9B /* Date+StringRepresentation.swift in Sources */,
